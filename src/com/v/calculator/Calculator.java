@@ -29,7 +29,7 @@ public class Calculator extends JFrame implements ActionListener {
                 "4","5","6","*",
                 "1","2","3","+",
                 "c","0",".","-",
-                "="
+                "V","A","T","="
         };
 
         for (int i = 0; i < buttonLabels.length; i++) { // 这里需要显式地写出判断条件 i < buttonLabels.length
@@ -59,6 +59,14 @@ public class Calculator extends JFrame implements ActionListener {
                 opertor = command;  //存储运算符
                 input = "";  //清空输入
             }
+        }
+
+        else if (command.matches("[A]")) {
+            textField.setText("https://github.com/charawu/calculator");
+        }else if (command.matches("[V]")) {
+            textField.setText("Creator:.v");
+        }else if(command.matches("[T]")) {
+            textField.setText("Test");
         }
 
         else if (command.matches("[=]")) {
